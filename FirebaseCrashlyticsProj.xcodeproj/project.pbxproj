@@ -15,6 +15,7 @@
 		0460E0F426C4F608002AFB9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0460E0F226C4F608002AFB9D /* LaunchScreen.storyboard */; };
 		0460E0FF26C4F952002AFB9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0460E0FE26C4F952002AFB9D /* GoogleService-Info.plist */; };
 		8FC61D1426E15CCB245CB311 /* Pods_FirebaseCrashlyticsProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8322E2B95E1DD6B3B201924C /* Pods_FirebaseCrashlyticsProj.framework */; };
+		BD6AE5A8288127B60056B9EE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE5A7288127B60056B9EE /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		0460E0FE26C4F952002AFB9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14B95DFF2045C415BDC4C13E /* Pods-FirebaseCrashlyticsProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseCrashlyticsProj.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseCrashlyticsProj/Pods-FirebaseCrashlyticsProj.debug.xcconfig"; sourceTree = "<group>"; };
 		8322E2B95E1DD6B3B201924C /* Pods_FirebaseCrashlyticsProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseCrashlyticsProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6AE5A7288127B60056B9EE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C65F25D27BF64E310B80A2FD /* Pods-FirebaseCrashlyticsProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseCrashlyticsProj.release.xcconfig"; path = "Target Support Files/Pods-FirebaseCrashlyticsProj/Pods-FirebaseCrashlyticsProj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				0460E0E726C4F606002AFB9D /* AppDelegate.swift */,
 				0460E0E926C4F606002AFB9D /* SceneDelegate.swift */,
 				0460E0EB26C4F606002AFB9D /* ViewController.swift */,
+				BD6AE5A7288127B60056B9EE /* SecondViewController.swift */,
 				0460E0ED26C4F606002AFB9D /* Main.storyboard */,
 				0460E0F026C4F608002AFB9D /* Assets.xcassets */,
 				0460E0F226C4F608002AFB9D /* LaunchScreen.storyboard */,
@@ -190,6 +193,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}",
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputFileListPaths = (
 			);
@@ -197,7 +202,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n#\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n\n";
 		};
 		FD80D1749548B1B411EA13E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6AE5A8288127B60056B9EE /* SecondViewController.swift in Sources */,
 				0460E0EC26C4F606002AFB9D /* ViewController.swift in Sources */,
 				0460E0E826C4F606002AFB9D /* AppDelegate.swift in Sources */,
 				0460E0EA26C4F606002AFB9D /* SceneDelegate.swift in Sources */,
